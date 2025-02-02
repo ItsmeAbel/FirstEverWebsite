@@ -1,0 +1,261 @@
+﻿/*makes the body start exactly from the top/from margin 0/, sets a background picture, and give it a center fixed poition*/
+body{
+	margin: 0;
+   background: url('images/autumn.jpg') no-repeat center center fixed;/*https://pixabay.com/sv/gr%C3%B6n-park-s%C3%A4song-natur-utomhus-1072828/*/
+  -moz-background-size: cover; /* makes the whole picture fit our browser, For Firefox */
+  -webkit-background-size: cover; /*for chrome and safari*/
+  -o-background-size: cover; /*for opera*/
+  background-size: cover; /*for internet explorer*/
+}
+/*Here starts the code that is common/grneral for all the pages */ 
+/*Makes the div an absolute div with a certain width and height. This wrapper is the base and holds everything on our website */
+#wrapper{
+	position:absolute;
+	left:50%;
+	width:960px;
+	height:auto;
+	margin-top:0px;
+	margin-left:-485px;
+	padding:5px;
+	background-color:#ccc;
+    box-shadow:2px 0px 50px 6px black; /*Creates a shadow behind the wrapper, 2px for the horizontal length, 0px for the vertical length, 50px for the blur radius, 6px for the spread radius and black for the color */	
+}
+/*puts "klädberger.com" texten relatively from the wrapper div*/
+#header
+{
+	position:relative; 
+	height:40px;	
+	margin-top:-5px;
+    margin-left:48px;
+}
+/*Makes the div have an absolute position on the left next to the "klädberget.com" text, and makes it 140x140 pixeles big */ 
+#logo{
+	position:absolute;
+	width:140px;
+	height: 140px;
+	margin-left: 5px;
+	margin-top: -30px;
+
+}
+/*Makes the div have an absolute position on the right next to the "klädberget.com" text, and makes it 140x140 pixeles big */
+#logo2{
+	position:absolute;
+	width:140px;
+	height: 140px;
+	margin-left: 785px;
+	margin-top: -30px;
+	
+}
+/*makes the first ul list, which holds the li lists(Home, contact...), have a relatively position from the wrapper div. it sets the width and height of the div, and also sets the divs position from right and left(with margin top and left)*/
+#menu ul{
+	position: relative;
+	width: 750px;
+	height: auto; /*Auto makes the divs height accordingly to the other things/divs, li, ul/ we have in the div*/ 
+	margin-top: 138px;
+	margin-left: 90px;
+	border-radius: 10px;/*makes the corner of the div round by 10 pixels*/
+	box-shadow:2px 5px 10px 1px black; /*Creates a shadow behind the div, 2px for the horizontal length, 5px for the vertical length, 10px for the blur radius, 1px for the spread radius and black for the color */
+	
+}
+/*when we hover the curser over the li lists in the first ul list, it displays a block on the second ul list, which is our dropdown menu*/
+#menu ul li:hover ul{
+	display: block;	
+}
+/*Creats a dropdown list(on the second ul) that has an absolute position, which is 10 px from the top and -70px from left*/
+#menu ul ul {
+	display: none;
+	position:absolute;
+	background: #39c;
+	margin-top: 10px;
+	margin-left: -70px;
+	width: 250px; /* sets the width and height of the second ul*/
+	height: 90px;
+    opacity: 0.9; /* puts the visibility of the dropdown menu to 0.9, which means by 90%*/	
+}
+/*the li lists in the second ul list*/
+#menu ul ul li{
+	list-style-type: none; /* sets the listing style to nothing*/
+	line-height: 40px; /*sets the vertical space between the li lists*/
+	padding: 0; /*sets the vertical space/padding between the li lists*/
+	margin-left: -35px; /*sets the position from the left*/
+}
+/*Sets a background color for the menu, and also sets padding around the first ul/menu (20px from top and bottom)*/
+.nav{
+	background: #39c;
+	text-align: center; /*den gör att li listan hamnar mitt i diven/ul*/
+	padding: 20px 0 20px 0;	
+}
+/*Sets the space/padding on each li lists in the menu(25px from right and left), and also makes it a horizontal list*/  
+.nav  li{
+	display: inline-block; 
+	padding: 0 25px 0 25px;
+}
+/*creats a box around the li lists, and makes it so that the text decoration becomes nothing, not the default*/
+.nav  li  a{
+	text-decoration: none;
+	padding: 16px 38px 16px 38px; /*sets the size of the box (top, right, bottom and left)*/
+	border-radius: 10px; /*makes the corners of the box/block round by 10px*/
+	color: #000;/*sets color of the li text*/	
+}
+/*when hover over the li lists, the color of the text and the background changes*/
+.nav  li  a:hover{
+	color: #fff;
+	background: #036;
+}
+/** HERE STARTS THE HOME/INDEX PAGE**/
+    /*makes a div that is relatively positioned from the wrapper div, and also makes it 900x350 pixels big*/
+#welcome{
+	position:relative;
+	width: 900px;
+	height: 350px;
+	margin-top: 85px; /*sets the divs distance from the top of the wrapper*/
+	margin-left: 20px;/*sets the divs distance from the left of the wrapper*/
+	border-style: double; /*Creates a border style around our div, which in this case is a double line*/
+	
+}
+   /*creats the div that holds the christmas picture, positioned relatively from the wrapper*/
+#christmas{
+	position:relative;
+	width: 900px;
+	height: 260px;
+	margin-top: 55px;
+	margin-left: 20px;
+	border-style: double;
+	
+}
+/**HERE STARTS THE CATALOG, SHIRTS, JACKETS, SCARFS, EXTRA AND TROUSERS PAGE**/
+   /*makes a div for the personal information field, relatively positioned from the wrapper*/
+#file{
+	position:relative;
+	float:left;
+	width:550px;
+	height:310px;
+	margin-left:10px;
+	margin-top:auto;
+	padding:5px;
+	background-color:#ccc;
+}
+/*a relative div inside the file div which holds the information field separated into two*/
+#formulär{
+	position: relative;
+	float:left;
+	width: 200px;	
+}
+  /*An outside div that holds the cloth and price divs inside*/
+#items{
+	position:relative;
+	float: left;
+	margin-top: 90px;
+	margin-left: 25px;
+	width:275px;
+	height:380px;
+	border-style: double;
+}
+  /*A div, inside the items div, which holds a picture inside*/
+#cloth{
+	position:relative;
+	border-style: double;
+	width:250px;
+	height:250px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+/*A div, inside the items div, which holds the quantity, size and color options*/
+#price{
+	position:relative;
+	border-style: double;
+	width:250px;
+	height:45px;
+	margin-left: 10px;
+	margin-top: 10px;
+	
+}
+/*A div, inside the items div, which holds the name and price text*/
+#clothname{
+	position:relative;
+	width:250px;
+	height:35px;
+	margin-left: 10px;
+	margin-top: 5px;
+	text-align: center;
+}
+/*HERE STARTS THE ABOUT PAGE*/
+   /*creats a relative div that holds the "klädberget" text*/
+.text1{
+	position:relative;
+    float: left;
+	width:600px;
+	margin-left:10px;
+	margin-top: 5px;
+	border-style: double;
+	border-color: #f4b13b;
+	background-color:#ccc;
+	font-family: "verdana"; /*sets the font of the text to verdana*/
+	line-height: 25px; /*space between the sentences*/
+}
+   /*creates a relative div for the "title" pics*/
+#rubrik1{
+	position:relative;
+	width:960px;
+    float:left;	
+	margin-top:76px;
+    margin-left:20px;	
+}
+/*A relative div that holds the pictures around the "klädberget" text*/
+#picture{
+	position:relative;
+    float:left;
+	width:280px;
+	height:980px;	
+	margin-top:-990px;
+    margin-left:660px;
+}
+/*creates 3 relative div inside the picture div*/
+#pix{
+	position:relative;
+	float: left;
+	margin-left: 10px;
+	margin-top: 65px;
+	width:250px;
+	height:250px;
+	border-style: double;
+	
+}
+/*THE CONTACT PAGE*/
+   /*An outside relative div that holds the pic div, the chief and the contactinfo paragraph*/
+#pff{
+	position:relative;
+	float: left;
+	margin-top: 70px;
+	margin-left: 25px;
+	margin-bottom: px;
+	width:900px;
+	height:320px;
+	border-style: double;	
+	
+}
+/*A div that holds a picture of the contact person*/
+#pic{
+	position:relative;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width:260px;
+	height:260px;
+	border-style: double;	
+}
+/* A paragraph that holds a text about the persons job*/
+p.chief{
+	position:relative;
+	font-family: Arial;
+	margin-left: 650px;
+	margin-top: 3px;
+	text-decoration: underline;
+}
+/* A paragraph that holds contact information about the contact people*/
+p.contactinfo{
+    position:relative;
+	font-family: Arial;
+	margin-left: 400px;
+	margin-top: 80px;
+}
